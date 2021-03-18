@@ -1,5 +1,5 @@
 x = 5
 y = "hello, world"
 
-print (x)
-print ("y")
+print (x+4)
+print (y)
