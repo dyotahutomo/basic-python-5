@@ -1,12 +1,7 @@
-# Ketahui jari jari lingkaran
-a = input("Masukkan Jari-jari Lingkaran: ")
-b = int(a)
+# Masukkan jari jari
+r = float(input("Masukkan Jari-jari Lingkaran: "))
 
-c = ((22/7) * (b**2))
-d = int(c)
-e = "\u00b2"
-txt = "Luas lingkaran dengan jari-jari {} cm adalah {} cm{}" .format (b, c, e)
-print (txt)
+# Rumus luas lingkaran
+L = float(22 / 7 * r ** 2)
 
-# saya masih belum bisa untuk pembulatan dibelakang koma
-# Saya rasa codingan ini terlalu panjang untuk hal sederhana seperti ini
+print("Luas lingkaran dengan jari-jari {} cm adalah {:.2f} cm\u00b2." .format(r, L))

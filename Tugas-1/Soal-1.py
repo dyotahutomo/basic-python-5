@@ -1,8 +1,10 @@
-a = input ("Nama: ")
-b = input ("Umur: ")
-c = int(b)
-d = input ("Tinggi: ")
-e = float(d)
+# Masukkan nama
+Nama = input("Masukkan Nama: ")
 
-txt = "Nama saya {}, umur saya {} tahun dan tinggi saya {} cm" .format (a, c, e)
-print(txt)
+# Masukkan umur
+Umur = int(input("Masukkan Umur: "))
+
+# Masukkan tinggi
+Tinggi = float(input("Masukkan Tinggi: "))
+
+print ("Nama saya {}, umur saya {} taun dan tinggi saya {} cm" .format(Nama, Umur, Tinggi))
