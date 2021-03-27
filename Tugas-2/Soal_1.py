@@ -1,34 +1,44 @@
-print ("--- Menu ---")
-print ("")
-print ("1. Daftar Kontak")
-print ("2. Tambah Kontak")
-print ("3. Keluar")
-print ("")
-menu = int(input ("Pilih Menu: "))
+print ("Selamat Datang!\n")
 
-if menu == 1:
-    daftar_kontak = []
-    kontak.append(kontak)
-    for i in kontak:
-        print ("Nama: {} " .format(nama))
-        print ("No. Telp: {} " .format(nomor_telepon))
-        break
-elif menu == 2:
-    count = int(input("Jumlah Data: "))
-    nama = []
-    nama.append(nama)
-    nomor = []
-    nomor.append(nomor)
+daftar_kontak = []
 
-    for i in range (count):
-        print ("Data ke {} " .format(i+1))
-        nama = input ("Nama: ")
-        nomor = int(input("Nomor: "))
-    print (nama .format(nama[i]))
-    print (nomor)
-elif menu == 3:
-    print ("Program selesai, sampai jumpa")
-else:
-    print ("Menu tidak tersedia")
+# Melihat Daftar Kontak
+def kontak ():
+    for kontak in daftar_kontak:
+        print ("Nama: {}" .format(kontak["nama"]))
+        print ("No. Telp: {}" .format(kontak["telepon"]))
 
-# program masih belum selesai sepenuhnya. Saya bingung
+# Menambahkan Kontak Baru
+def tambah ():
+    count = int(input("Jumlah Kontak: "))
+    for i in count:
+        kontak = {}
+        nama_baru = input ("Nama: ")
+        telepon_baru = input ("No. Telp: ")
+        kontak ["nama"] = nama_baru
+        kontak ["telepon"] = telepon_baru
+        daftar_kontak.append(kontak)
+        print ("Kontak Berhasil Ditambahkan!")
+
+# Keluar dari Program
+def keluar ():  
+    print  ("Program Selesai, Sampai Jumpa!")
+
+menu = " "
+while menu != "3":
+    print (
+        "--- Menu ---\n"
+        "1. Daftar Kontak\n"
+        "2. Tambah Kontak\n"
+        "3. Keluar\n"
+    )
+    menu = input("Pilih Menu: ")
+
+    if menu == "1":
+        kontak()
+    elif menu == "2":
+        tambah()
+    elif menu == "3":
+        keluar()
+    else:
+        print ("Menu Tidak Tersedia")
